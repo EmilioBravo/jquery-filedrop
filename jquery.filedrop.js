@@ -120,6 +120,15 @@
       builder += dashdash;
       builder += boundary;
       builder += crlf;
+      builder += 'Content-Disposition: form-data; name="name"';
+      builder += crlf;
+      builder += crlf;
+      builder += filename;
+      builder += crlf;
+
+      builder += dashdash;
+      builder += boundary;
+      builder += crlf;
       builder += 'Content-Disposition: form-data; name="' + opts.paramname + '"';
       builder += '; filename="' + filename + '"';
       builder += crlf;
